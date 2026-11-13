@@ -117,6 +117,79 @@ Consejos:
 
 ---
 
+## 6. Lo que enseñan los tutoriales de YouTube (transcripciones leídas)
+
+Videos analizados:
+- Higgsfield AI — "3-Step Workflow To Make Ultra-Realistic AI Ads" (jun 2026, 766k vistas) — https://www.youtube.com/watch?v=3rDs6FhFoUQ
+- Dan Kieft — "How I Make Realistic AI Videos with Seedance 2.5" (oct 2026, 715k vistas, patrocinado por Higgsfield) — https://www.youtube.com/watch?v=2hJsvDSPWYM
+- Andy Stauring — "How to make VIRAL Dropshipping UGC ads using AI (2026 METHOD)" (dic 2025) — https://www.youtube.com/watch?v=83zA6g0Wqtc
+- Michael Bernstein — "TikTok Organic Dropshipping Videos That ACTUALLY Convert" — https://www.youtube.com/watch?v=oIag-DZr6R0
+
+### 6.1 Método "clonar un video ganador" (el que buscas)
+1. Encuentra videos que YA funcionan: Meta Ad Library (anuncios activos más de 1 mes = rentables) y TikTok/IG con muchos comentarios tipo "¿dónde lo compro?".
+2. Descárgalos (con cualquier descargador de TikTok/IG).
+3. Súbelos a **Gemini** y pide el desglose: guion, tomas, duración de cada toma, ángulos.
+4. Con Claude/ChatGPT crea variaciones que mantengan **la misma estructura psicológica** (gancho, problema, revelación) pero con tu producto y otras palabras.
+5. Recrea toma por toma con IA.
+→ No copias el video: copias la ESTRUCTURA que ya está probada.
+
+Prompt para Gemini (sube el reel):
+```
+Break down this video shot by shot. For each shot give: start and end time,
+camera angle and lens, camera movement, what is in frame, what moves,
+lighting, on-screen text, sound. Then write a Veo 3.1 prompt to recreate
+each shot with my product instead of the original one.
+```
+
+### 6.2 Hojas de referencia ("sheets") — evita que la IA invente el producto
+- **Product sheet**: una imagen con el producto de frente, 3/4 y lado, fondo gris o blanco. "Una sola foto no basta: el modelo necesita verlo de todos los ángulos o alucina a mitad de la escena."
+- **Location**: genera el cuarto en ángulo 3/4 (no de frente): da profundidad y funciona mejor cuando la cámara se mueve.
+- Fondo gris en las hojas = más resultados utilizables.
+- Si la hoja tiene varias caras/productos, borra los extra: el modelo de video no sabe cuál usar y "deriva".
+- Guarda cada referencia con nombre (ej. KATANA, CUARTO) y úsalos con ese nombre en los prompts.
+
+### 6.3 Prueba antes de producir
+- Haz 2 opciones de cada referencia y **pruébalas en movimiento** con un prompt simple. Una imagen que se ve bien quieta puede romperse al moverse.
+- **Cambia solo UNA cosa a la vez** (mismo prompt, solo cambias el cuarto o el producto) para saber qué arregla qué.
+
+### 6.4 Shot list con "prefijo de estilo"
+- Un bloque de estilo (luz, cámara, color) que va pegado al inicio de TODOS los prompts. Lo cambias una vez y cambia en todas las tomas → coherencia.
+- Cada prompt con nombre (1A, 1B, 2A...) para corregir solo el que falla.
+
+### 6.5 El secreto de la calidad: "los mejores segundos de 100 intentos"
+- "El anuncio final son solo los mejores segundos de 100 intentos, cortados juntos." Generan varias veces y sacan 1–2 s buenos de cada generación (la mano de una, el humo de otra...).
+- Cortan **en la acción** (corte a mitad del movimiento) para que no se note el cambio de clip.
+
+### 6.6 Mapa / esquema para fijar posiciones (arregla tu problema del coche)
+- El texto no puede fijar dónde están las cosas. Hacen una imagen **esquema** (en el modelo de imagen) marcando dónde está cada objeto, su tamaño y dirección del movimiento, y la adjuntan al video.
+- Anclan al personaje u objeto a algo fijo ("junto al árbol de la izquierda").
+- Escriben la dirección explícita: "se mueve de izquierda a derecha, la calle a su izquierda, el edificio a la derecha".
+
+### 6.7 Describe el movimiento paso a paso
+- "Baila" o "camina" no significa nada para el modelo. Se describe movimiento por movimiento (ej. "dos asentimientos, gira el hombro, chasquea los dedos, gira un cuarto"). Para producto: "la mano baja la katana, la suelta, el pulgar presiona el botón, la hoja se enciende".
+
+### 6.8 Editar baja la calidad
+- Cada edición con IA suaviza la imagen (look plástico). Truco: en un editor de fotos pon la imagen original encima y la editada debajo, y borra solo la zona cambiada. Así conservas la textura original.
+
+### 6.9 Realismo (Dan Kieft)
+- Prueba **varios modelos de imagen** con el mismo prompt (Nano Banana Pro, Flux 2 Pro, GPT Image, Seedream). Cada uno es mejor en algo; las imágenes son baratas.
+- Para video realista él recomienda **Seedance 2.5** (es su opinión y el video está patrocinado). Su **modo borrador 480p** a veces se ve MÁS real; luego escalas el bueno.
+- Bajar la resolución a propósito (1K) = se ve menos "IA".
+- Fórmula **CTLT** para imágenes: **C**ámara (lente, encuadre) + **T**ono (ambiente) + **L**uz + **T**extura (detalles físicos).
+- Técnicas de cámara "humana" para prompts de video: *handheld* (temblor), *crash zoom* (zoom brusco), *whip pan* (giro rápido), *walking backwards*, *blocking the frame* (alguien pasa delante), *exposure adjustment* (la cámara se ajusta a la luz), *focus hunting* (busca el foco). Combinarlas = mucho más real.
+- **Contraste** = viral: algo en un lugar o situación inesperada.
+
+### 6.10 Que venda, no solo que se haga viral (Michael Bernstein)
+- Un video puede tener 3 millones de vistas y $0 si solo entretiene. Debe mostrar el BENEFICIO y que se entienda que se vende.
+- Señal buena: comentarios "¿dónde lo consigo?".
+- CTA claro siempre. Comentario fijado con el CTA.
+- Después de un video viral, publica en seguida videos **más vendedores** (el algoritmo se los muestra a la misma gente).
+
+### 6.11 UGC casual > anuncio pulido (Andy Stauring)
+- El anuncio súper pulido activa "esto es publicidad". El video casual de celular parece recomendación de un amigo y convierte mejor.
+
+---
+
 ## Fuentes
 - Google Cloud — Ultimate prompting guide for Veo 3.1: https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-veo-3-1
 - Google Flow Help — modelos: https://support.google.com/flow/answer/16352836?hl=en
